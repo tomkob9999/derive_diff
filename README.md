@@ -31,26 +31,32 @@ This paper demonstrates how these properties can be used to derive differential 
 
 ### **2.1 Derivation of the Continuous Property**
 The continuous reciprocal inversion property arises naturally from the chain rule. If $y = f(x)$, then $x = f^{-1}(y)$. Differentiating both sides with respect to $x$:
+
 $$
 \frac{dy}{dx} \cdot \frac{dx}{dy} = 1.
 $$
 
 This simplifies to:
+
 $$
 f'(x) \cdot \left( f^{-1} \right)'(f(x)) = 1.
 $$
 
 ### **2.2 Derivation of the Discrete Property**
 For the discrete case, consider forward differences:
+
 $$
 \Delta f = f(x_n) - f(x_{n-1}), \quad \Delta f^{-1} = f^{-1}(f(x_n)) - f^{-1}(f(x_{n-1})).
 $$
 
 The discrete reciprocal property then states:
+
 $$
 \Delta f \cdot \Delta f^{-1} = 1,
 $$
+
 or equivalently:
+
 $$
 \left( f(x_n) - f(x_{n-1}) \right) \cdot \left( f^{-1}(f(x_n)) - f^{-1}(f(x_{n-1})) \right) = 1.
 $$
@@ -64,33 +70,43 @@ $$
 1. Closed form: $f(x) = e^{3x}$.
 2. Inverse: $f^{-1}(y) = \frac{\ln(y)}{3}$.
 3. Reciprocal property:
-   $$
-   f'(x) \cdot \left( f^{-1} \right)'(f(x)) = 1.
-   $$
+
+$$
+f'(x) \cdot \left( f^{-1} \right)'(f(x)) = 1.
+$$
+
 4. Substituting derivatives:
-   $$
-   f'(x) = 3e^{3x}, \quad \left( f^{-1} \right)'(y) = \frac{1}{3y}.
-   $$
+
+$$
+f'(x) = 3e^{3x}, \quad \left( f^{-1} \right)'(y) = \frac{1}{3y}.
+$$
+
 5. Result:
-   $$
-   \frac{dy}{dx} = 3y.
-   $$
+
+$$
+\frac{dy}{dx} = 3y.
+$$
 
 #### **Example 2: $f(x) = 3x^2$**
 1. Closed form: $f(x) = 3x^2$.
 2. Inverse: $f^{-1}(y) = \sqrt{\frac{y}{3}}$.
 3. Reciprocal property:
-   $$
-   f'(x) \cdot \left( f^{-1} \right)'(f(x)) = 1.
-   $$
+
+$$
+f'(x) \cdot \left( f^{-1} \right)'(f(x)) = 1.
+$$
+
 4. Substituting derivatives:
-   $$
-   f'(x) = 6x, \quad \left( f^{-1} \right)'(y) = \frac{1}{6\sqrt{\frac{y}{3}}}.
-   $$
+
+$$
+f'(x) = 6x, \quad \left( f^{-1} \right)'(y) = \frac{1}{6\sqrt{\frac{y}{3}}}.
+$$
+
 5. Result:
-   $$
-   \frac{dy}{dx} = 6x.
-   $$
+
+$$
+\frac{dy}{dx} = 6x.
+$$
 
 ---
 
@@ -100,26 +116,32 @@ $$
 #### **Example 1: $f(x) = e^{3x}$**
 1. Closed form: $f(x) = e^{3x}$.
 2. Reciprocal property:
-   $$
-   \left( f(x_n) - f(x_{n-1}) \right) \cdot \left( f^{-1}(f(x_n)) - f^{-1}(f(x_{n-1})) \right) = 1.
-   $$
-3. Substitute inverse: $f^{-1}(y) = \frac{\ln(y)}{3}$.
-4. Solve for $f(x_n)$:
-   $$
-   f(x_n) = e^3 \cdot f(x_{n-1}).
-   $$
+
+$$
+\left( f(x_n) - f(x_{n-1}) \right) \cdot \left( f^{-1}(f(x_n)) - f^{-1}(f(x_{n-1})) \right) = 1.
+$$
+
+4. Substitute inverse: $f^{-1}(y) = \frac{\ln(y)}{3}$.
+5. Solve for $f(x_n)$:
+
+$$
+f(x_n) = e^3 \cdot f(x_{n-1}).
+$$
 
 #### **Example 2: $f(x) = 3x^2$**
 1. Closed form: $f(x) = 3x^2$.
 2. Reciprocal property:
-   $$
-   \left( f(x_n) - f(x_{n-1}) \right) \cdot \left( f^{-1}(f(x_n)) - f^{-1}(f(x_{n-1})) \right) = 1.
-   $$
-3. Substitute inverse: $f^{-1}(y) = \sqrt{\frac{y}{3}}$.
-4. Solve for $f(x_n)$:
-   $$
-   f(x_n) = 3 \left( \sqrt{\frac{f(x_{n-1})}{3}} + 1 \right)^2.
-   $$
+
+$$
+\left( f(x_n) - f(x_{n-1}) \right) \cdot \left( f^{-1}(f(x_n)) - f^{-1}(f(x_{n-1})) \right) = 1.
+$$
+
+4. Substitute inverse: $f^{-1}(y) = \sqrt{\frac{y}{3}}$.
+5. Solve for $f(x_n)$:
+
+$$
+f(x_n) = 3 \left( \sqrt{\frac{f(x_{n-1})}{3}} + 1 \right)^2.
+$$
 
 ---
 
